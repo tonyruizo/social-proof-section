@@ -1,1 +1,1 @@
-footer{bottom:0}footer .attribution{font-size:11px;text-align:center}footer .attribution a{color:#3e52a3}
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");*{box-sizing:border-box}body{min-height:100vh;margin:0;font-family:'Spartan', sans-serif;font-size:15px;background:url("../images/bg-pattern-top-mobile.svg") top 0 left 0 no-repeat,url("../images/bg-pattern-bottom-mobile.svg") bottom -200px right 0 no-repeat}footer{bottom:0;width:100%}footer .attribution{font-size:11px;text-align:center}footer .attribution a{color:#3e52a3}
