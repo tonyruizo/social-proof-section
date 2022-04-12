@@ -7,14 +7,136 @@
 body {
   min-height: 100vh;
   margin: 0;
+  padding-top:0;
+  width: min;
   font-family: 'Spartan',
   sans-serif;
   font-size: 15px;
-  background: url('../images/bg-pattern-top-mobile.svg') top 0 left 0 no-repeat,
+  background: url('../images/bg-pattern-top-mobile.svg') top -15px left 0 no-repeat,
   url('../images/bg-pattern-bottom-mobile.svg') bottom -200px right 0 no-repeat;
-  // background-size: contain;
+  display: grid;
+  place-items: center;
+  text-align: center;
 }
 
+.container {
+  padding-top: 4.5rem;
+  margin: 0 auto;
+  max-width: 330px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: 
+    "heading"
+    "rating-container"
+    "comment-container";
+  
+}
+
+.heading {
+  h1 {
+    color: $VeryDarkMagenta;
+    font-size: 1.5rem;
+    max-width: 250px;
+    
+    margin: 0 auto;
+  }
+
+  p {
+    color: $DarkGrayishMagenta;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 500;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+}
+
+// Rating Area
+
+.rating-container {
+  .rating-items {
+    margin: 10px 0;
+    .rating-item {
+      display: block;
+      place-self: center;
+      margin: 15px 0;
+
+      .rating-item-review {
+        color: $VeryDarkMagenta;
+        font-weight: 700;
+        font-size: 0.7rem;
+        background-color: $LightGrayishMagenta;
+        border-radius: 5px;
+        padding-top: 15px ;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+// Comment Area
+
+.comment-container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  
+  .comment-items {
+
+    .comment-item {
+      background-color: $VeryDarkMagenta;
+      border-radius: 5px;
+
+      .profile {
+        display: flex;
+        width: 280px;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        .profile-avatar {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+        }
+        img {
+          width: 30px;
+          border-radius: 50%;
+        }
+        .profile-info {
+          color: $LightGrayishMagenta;
+          font-size: 0.7rem;
+
+          p {
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            align-items: start;
+          }
+
+          span {
+            color: $SoftPink;
+            font-weight: 400;
+          }
+
+          
+        }
+      }
+
+      .comment {
+        color: $LightGrayishMagenta;
+        margin: 20px 0;
+
+        p{
+          font-size: 0.7rem;
+          line-height: 1.5;
+          width: 280px;
+          align-items: start;
+        }
+      }
+    }
+  }
+}
 
 // Footer
 
@@ -29,5 +151,13 @@ footer {
       color: hsl(228, 45%, 44%);
     }
 
+  }
+}
+
+// Responsive
+
+@media (min-width: 600px) {
+  body {
+    background-color: green;
   }
 }
