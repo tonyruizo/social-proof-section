@@ -87,7 +87,6 @@ body {
       background-color: $VeryDarkMagenta;
       border-radius: 5px;
       margin: 15px 0;
-      // height: 100%;
 
       .profile {
         display: flex;
@@ -158,10 +157,58 @@ footer {
   }
 }
 
-// Responsive
+// ----Responsive
 
-@media (min-width: 600px) {
-  body {
-    background-color: green;
+// Tablet View
+@media (min-width: 820px) {
+  .container {
+    width: 600px;
   }
+
+  .heading {
+    h1{
+      font-size: 2rem;
+      max-width: 650px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    
+  }
+
+  .rating-container {
+    .rating-item-review p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .comment-container {
+
+    .profile {
+      img {
+        width: 50px;
+      }
+      
+    }
+
+    .profile-info p {
+      font-size: 1.2rem;
+    }
+
+    .comment p {
+      font-size: 1.2rem;
+      width: 600px;
+    }
+  }
+}
+
+// Desktop view
+
+@media (min-width: 1220px) {
+  body{
+    background-color: darkblue;
+  }
+
 }
