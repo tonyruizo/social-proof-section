@@ -70,6 +70,10 @@ body {
         border-radius: 5px;
         padding-top: 15px ;
         padding-bottom: 5px;
+
+        img {
+          width: 30px;
+        }
       }
     }
   }
@@ -160,7 +164,13 @@ footer {
 // ----Responsive
 
 // Tablet View
-@media (min-width: 820px) {
+@media (min-width: 768px) {
+
+  body {
+
+    background: url('../images/bg-pattern-top-mobile.svg') top 0 left 360px no-repeat,
+    url('../images/bg-pattern-bottom-mobile.svg') bottom 0 right 0 no-repeat;
+  }
   .container {
     width: 600px;
   }
@@ -185,28 +195,45 @@ footer {
   }
 
   .comment-container {
-
-    .profile {
-      img {
-        width: 50px;
+    .comment-items {
+      .comment-item {  
+        .profile {
+          display: flex;
+          width: 100%;
+          margin: 0 auto;
+          padding-top: 40px;
+          padding-left: 100px;
+  
+          img {
+            width: 50px;
+            border-radius: 50%;
+          }
+  
+          .profile-info {
+            color: $LightGrayishMagenta;
+            font-size: 1rem;
+          }
+        }
+  
+        .comment {
+          padding-bottom: 30px ;
+  
+          p {
+            font-size: 1rem;
+            line-height: 1.7;
+            width: 400px;
+            text-align: left;
+            margin: 0 auto;
+          }
+        }
       }
-      
-    }
-
-    .profile-info p {
-      font-size: 1.2rem;
-    }
-
-    .comment p {
-      font-size: 1.2rem;
-      width: 600px;
     }
   }
 }
 
 // Desktop view
 
-@media (min-width: 1220px) {
+@media (min-width: 1125px) {
   body{
     background-color: darkblue;
   }
