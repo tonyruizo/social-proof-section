@@ -72,7 +72,8 @@ body {
         padding-bottom: 5px;
 
         img {
-          width: 30px;
+          width: 22px;
+          padding: 0 5px;
         }
       }
     }
@@ -131,7 +132,6 @@ body {
       .comment {
         color: $LightGrayishMagenta;
         padding: 20px 0;
-        height: 100%;
 
         p{
           font-size: 0.7rem;
